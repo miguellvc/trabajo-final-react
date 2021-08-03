@@ -7,6 +7,8 @@ import { Provider } from 'react-redux';
 import { store } from './app/store/store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'leaflet/dist/leaflet.css';
+import './assets/styles.css';
 
 ReactDOM.render(
   <React.StrictMode>
