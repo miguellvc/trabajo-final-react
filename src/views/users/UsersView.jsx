@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getUsersAllUsers } from '../../app/store/actions/usersActions';
-import { loadingSelector, usersSelector } from '../../app/store/selectors/usersSelector';
+import { getUsersAllUsers } from '../../app/redux/actions/usersActions';
+import { loadingSelector, usersSelector } from '../../app/redux/selectors/usersSelector';
 import { UsersList } from '../../components/users/UsersList';
+
+//https://react-redux.js.org/using-react-redux/connect-mapstate
 
 const mapStateToProps = state => ({
     loading: loadingSelector(state),
