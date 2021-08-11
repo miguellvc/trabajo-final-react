@@ -1,5 +1,8 @@
 {
   "name": "trabajo-final-react",
+  "author": {
+    "name": "Emanuel Cortez"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
