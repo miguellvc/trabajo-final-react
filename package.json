@@ -1,7 +1,7 @@
 {
   "name": "trabajo-final-react",
   "author": {
-    "name": "Emanuel Cortez"
+    "name": "Miguel Perez"
   },
   "version": "0.1.0",
   "private": true,
@@ -10,8 +10,8 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
-    "bootstrap": "^5.0.2",
     "leaflet": "^1.7.1",
+    "node-sass": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-leaflet": "^3.2.1",

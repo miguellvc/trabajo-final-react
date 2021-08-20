@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
-import thunkMiddleware from 'redux-thunk';
-import logger from 'redux-logger';
+import thunkMiddleware from 'redux-thunk';//despacha acciones asincrónas
+import logger from 'redux-logger'; //registra los cambios del estore en el navegador
 import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducer from './reducers/rootReducer';
 
@@ -10,6 +10,6 @@ const middlewares = [
 ].filter(Boolean);
 
 export const store = createStore(
-    rootReducer,
-    composeWithDevTools(applyMiddleware(...middlewares))
+    rootReducer, //aquí recibe el state
+    composeWithDevTools(applyMiddleware(...middlewares)) //pasamos los middleware al store
 );

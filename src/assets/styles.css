@@ -1,4 +1,13 @@
-.leaflet-container {
+:root{
+  --bg-white: rgba(255, 255, 255, 0.5);
+  --br: 5px; 
+  --border: solid 1px rgba(255, 255, 255, 05);
+}
+
+body{
+  background: -webkit-radial-gradient(#f50a0a, #0a0011);
+}
+/* .leaflet-container {
     height: 420px;
     width: 100%;
-  }
+  } */

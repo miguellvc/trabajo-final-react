@@ -1,0 +1,282 @@
+/* Estilos para el Sidebar */
+.sidebar{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 20%;
+}
+.sidebar ul{
+    padding: 0px;
+    margin: 20px 0px;
+    list-style: none;
+    text-align: left;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+.sidebar ul li a{
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    text-decoration: none;
+    padding: 12px 10px;
+}
+.sidebar ul li a:hover{
+    color: white; 
+    border-radius: var(--br);
+    background-color: rgb(36, 1, 16);
+    box-shadow: 0 0px 10px 2px rgba(70, 5, 33, 0.5);
+
+}
+
+.sidebar-logo{
+    color: white; 
+    text-align: center; 
+    margin-top: 10px;
+ }
+ 
+ .sidebar-logo img{
+     width: 100px; 
+     box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.3);
+ }
+ 
+ /* Estilos para las cards */
+
+.container-sites{
+    padding: 5px;
+    width: 80%;
+}
+.container-sites .title-sites h2{
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    margin: 10px 0; 
+    text-align: center;
+}
+
+.container-sites-card{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* height: 100vh; */
+}
+.container-sites-card figure{
+   position:relative;
+   height: 250px;
+   margin: 6px;
+    cursor: pointer;
+    width: 350px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+}
+.container-sites-card figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 400ms ease-out;
+    will-change: transform;
+}
+ .container-sites-card figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,103,123,0.7);
+    transition: all 400ms ease-out;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+}
+.container-sites-card figure:hover > .capa {
+    opacity: 1;
+    visibility: visible;
+}
+.container-sites-card figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+.container-sites-card figure:hover > img{
+    transform: scale(1.3);
+}
+.container-sites-card figure .capa h3{
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 120px;
+    transition: all 400ms ease-out;
+    margin-top: 30px;
+}
+.container-sites-card figure .capa p{
+    color: #fff;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+} 
+
+/* para el boton flotante */
+
+#btn-mas{
+    display: none;
+}
+.container-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+.btn-info a, .btn-mas label{
+    display: block;
+    text-decoration: none;
+    background: #cc2b2b;
+    color: #fff;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.4);
+    transition: all 500ms ease;
+}
+.btn-info a:hover{
+    background: #fff;
+    color: #cc2b2b;
+}
+.btn-info a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .btn-info a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+.btn-mas label{
+    cursor: pointer;
+    background: #f44141;
+    font-size: 23px;
+}
+#btn-mas:checked ~ .btn-mas label{
+    transform: rotate(135deg);
+    font-size: 25px;
+}
+
+
+/* estilos para las burbujas */
+
+
+.burbuja{
+    border-radius: 50%;
+    background:rgb(36, 1, 16);
+    opacity: .5;
+    position: absolute;
+    bottom: -150;
+    animation: burbujas 3s linear infinite ;
+}
+
+.burbuja:nth-child(1){
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(2){
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3){
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(4){
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5){
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(7){
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(8){
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 5s;
+    animation-delay: 7s;
+}
+
+.burbuja:nth-child(9){
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(10){
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 9s;
+}
+
+
+@keyframes burbujas{
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    30%{
+        transform: translateX(30px);
+    }
+    50%{
+        opacity: .4;
+    }
+    100%{
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

@@ -13,7 +13,9 @@ export const getUsersError = (err) => ({ type: GET_USERS_ERROR, payload: err });
 //Dispatch with Thunks Middleware
 export const getUsersAllUsers = () => {
   return async (dispatch) => {
+    
     dispatch(usersLoading());
+
     try {
       const users = await getUsers();
       dispatch(getUsersOk(users));

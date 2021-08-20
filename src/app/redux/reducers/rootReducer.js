@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
 import { usersReducer } from './usersReducer';
 
-const root = (state = {}, action) => {
+const rootReducer = (state = {}, action) => {
     return state
 }
 
+//combinamos todos los reducer
 export default combineReducers({
-    root,
+    rootReducer,
     usersReducer
+    //aquí se importa los demas reducer 
 })

@@ -1,3 +1,5 @@
+//los reducer son los encargados de manipular el state
+
 import { GET_USERS_ERROR, GET_USERS_LOADING, GET_USERS_OK } from "../actions/usersActions";
 
 const initialState = {
@@ -7,7 +9,9 @@ const initialState = {
 }
 
 export const usersReducer = (state = initialState, action) => {
+    
     const { type, payload } = action;
+    
     switch(type) {
         case GET_USERS_LOADING:
             return { ...state, loading: true, users: [], error: null };
@@ -18,4 +22,5 @@ export const usersReducer = (state = initialState, action) => {
         default:
             return state;
     }
+
 }
