@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
+import TouristSitesViews from './tourist-site/TouristSitesViews';
 
-import { TouristSite } from '../components/tourist-site/TouristSites';
 
 export class Home extends Component {
 
     render(){
         return(
-            <div>
-                <TouristSite/>
-            </div>
+          
+                <TouristSitesViews></TouristSitesViews>
+        
         )
     }
 }

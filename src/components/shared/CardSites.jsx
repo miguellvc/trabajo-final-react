@@ -1,79 +1,32 @@
 import React from "react";
 import "../shared/shared.css"
-export const CardSites = () => {
+export const CardSites = ({ sites }) => {  
+  console.log("propiedad de card sites",  sites[0].name)
   return (
     <>
       <main className="container-sites">
         <div className="title-sites">
-          <h2>Cerro el Toro</h2>
+          <h2>Sitios Turisticos</h2>
         </div>
 
         <div className="container-sites-card">
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
-
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
-
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
-
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
-
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
-
-          <figure>
-              <img src="https://lh3.googleusercontent.com/p/AF1QipPH6-KlOD_nOmXiXpUR6bTjq-lQ-Q0HiC3oYgPW=s1600-w400" alt=""/>
-              <div class="capa">
-                <h3>SLee Dw</h3>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Maiores, vero!
-                </p>
-              </div>
-          </figure>
+          {
+            sites.map(site =>{
+              return(
+                
+                  <figure>
+                            <img src={site.photo_url[0].url} alt={site.photo_url[0].description}/>
+                            <div class="capa">
+                              <h3>{site.name}</h3>
+                              <p>
+                              {site.photo_url[0].description}
+                              </p>
+                            </div>
+                  </figure>
+                
+              )
+            })
+          }
         </div>
       </main>
     </>

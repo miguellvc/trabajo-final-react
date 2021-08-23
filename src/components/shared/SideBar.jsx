@@ -14,17 +14,17 @@ export const SideBar = () => {
         <ul>
                 <li>
                     <a href="#">
-                        Cerro el Toro
+                        Sitios Turísticos
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        Talampaya
+                        Museos
                     </a>
                 </li>
                 <li>
                     <a href="">
-                        Parque Dinos
+                        Alojamientos
                     </a>
                 </li>
             </ul>
