@@ -1,0 +1,17 @@
+.gallery{
+    width: 100%;
+    margin-left: 50px;
+}
+
+.container-map{
+    display: flex;
+}
+
+.container-map .map{
+    width: 50%;
+    background-color: red;
+}
+
+.container-map .description{
+    width: 40%;
+}

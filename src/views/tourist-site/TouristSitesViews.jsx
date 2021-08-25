@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { getAllSites } from '../../app/redux/actions/sitesActions';
+import { getAllSites, getSite } from '../../app/redux/actions/sitesActions';
 import "../tourist-site/touristSitesView.css"
 
 import { 
-    SideBar,
-    CardSites, 
-    Burbujas,
-    ButtonInfo 
+    CardSites
 } from '../../components/shared/shared';
 
 const mapStateToProps = state => ({
@@ -17,8 +14,11 @@ const mapStateToProps = state => ({
 })
 
 const mapActionsToProps = dispatch => ({
-    getSites: () => dispatch(getAllSites())
+    getSites : () => dispatch(getAllSites()),
+    getSitee : (id) => getSite(id, dispatch)
 })
+
+
 
 export class TouristSitesView extends Component{
     
@@ -28,12 +28,10 @@ export class TouristSitesView extends Component{
     
     render(){
         return(
-            <div className="container">
-                <SideBar></SideBar>
-                {this.props.loading ? <p>Cargando data</p> : <CardSites  sites={this.props.sites}/> }
-                <Burbujas></Burbujas>
-                <ButtonInfo></ButtonInfo>
-            </div>
+                <>
+                    {this.props.loading ? <p>Cargando data</p> : <CardSites  sites={this.props.sites} info={ (id) => this.props.getSitee(id) }/> }
+                    
+                </>
         )
     }
 }

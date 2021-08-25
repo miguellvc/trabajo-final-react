@@ -17,6 +17,8 @@ export const ButtonInfo = () =>{
                     <label for="btn-mas" class="fa fa-plus"></label>
                 </div>
             </div>
+
+
         </>
     )
 

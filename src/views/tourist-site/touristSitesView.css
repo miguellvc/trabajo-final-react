@@ -1,7 +1,7 @@
 /* Variables globales declaradas en styles.css */
 .container{
     background-color: var(--bg-white);
-    height: auto;
+    height: 90% !important;
 
     backdrop-filter: blue(20px);
     border: var(--border);
