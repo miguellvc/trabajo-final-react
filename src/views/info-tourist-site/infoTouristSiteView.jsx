@@ -1,78 +1,59 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { Component } from "react";
+// import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { getSite } from "../../app/redux/actions/sitesActions";
 import "../info-tourist-site/infoTouristSiteView.css";
+
 const mapStateToProps = (state) => ({
   sites: state.sitesReducer.sites,
-  loading: state.sitesReducer.loading,
-  allSite: state.sitesReducer.allSite,
+  loading: state.sitesReducer.loadingSite,
 });
 
 const mapActionsToProps = (dispatch) => ({
-  getSite: (id) => dispatch(getSite(id)),
+  getSit: (id) => dispatch(getSite(id)),
 });
+export class InfoTouristSiteView extends Component {
 
-const InfoTouristSiteView = ({ sites, getSite }) => {
-  let { id } = useParams();
-  getSite(id);
-//   useEffect(() => {
-    
-//     console.log("se ejecuta el componente info tourist", sites, id);
-//   });
+  componentWillMount() {
+    const {
+      match: { params },
+    } = this.props;
+    this.props.getSit(params.id)
+    console.log("Componente infot tourist", this.props.sites, params);
+    // console.log("sitio ", this.props.getSit(params.id));
+  }
 
-  return (
-    <div>
-      {sites.map((site) => {
-        return (
-          <div className="gallery">
-            <h1>{site.name}</h1>
-            <div >
+  render() {
+    const site = this.props.sites;
+    return (
 
-                {site.photo_url.map(photo => {
-                   return <img
-                    src={photo.url}
-                    width="260"
-                    height="300"
-                    alt="Galeria CSS 1"
-                  />
-                })}
-              <img
-                src="https://www.placecage.com/c/260/300"
-                width="260"
-                height="300"
-                alt="Galeria CSS 2"
-              />
-              <img
-                src="http://placekitten.com/260/300"
-                width="260"
-                height="300"
-                alt="Galeria CSS 3"
-              />
-              <img
-                src="http://www.stevensegallery.com/260/300"
-                width="260"
-                height="300"
-                alt="Galeria CSS 4"
-              />
-            </div>
+      this.props.loading ?  <div>Cargando Data</div> :
+      <div className="gallery">
+        <h1>{site.name}</h1>
 
-            <div className="container-map">
-              <div className="map">
-                  mapa
-              </div>
+        <div className="gallery-container-img">
+            {site.photo.map((photo) => {
+              return (
+                <img className="img"
+                  src={photo.url}
+                  alt={photo.description}
+                />
+              );
+            })}
+            
+        </div>
 
-              <div className="description">
-                  <p>
-                      {site.description}
-                  </p>
-              </div>
-            </div>
+        <div className="container-map">
+          <div className="map">
+            mapa
           </div>
-        );
-      })}
-    </div>
-  );
-};
 
+          <div className="description">
+            <p>{site.description}</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 export default connect(mapStateToProps, mapActionsToProps)(InfoTouristSiteView);

@@ -1,10 +1,17 @@
-const base = process.env.REACT_APP_API_BASE_URL;
+const base = "http://localhost:3001/api";
+// https://pilar-final-task-backend.herokuapp.com/api/
+// const routes = {
+//     path1: () => `${base}/`,
+//     path2: () => `${base}/resources`,
+//     path3: (id) => `${base}/resoures/${id}`,
+//     sample: () => `${base}/users?page=2`
+// }
 
-const routes = {
-    path1: () => `${base}/`,
-    path2: () => `${base}/resources`,
-    path3: (id) => `${base}/resoures/${id}`,
-    sample: () => `${base}/users?page=2`
+const routesSite ={
+    getAllTouristSite : () => `${base}/touristSite`,
+    getTouristSite : (id) => `${base}/touristSite/${id}`
 }
 
-export default routes;
+
+
+export default routesSite;

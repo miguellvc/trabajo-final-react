@@ -7,6 +7,21 @@
 body{
   background: -webkit-radial-gradient(#f50a0a, #0a0011);
 }
+
+/* Variables globales declaradas en styles.css */
+.container-view{
+  background-color: var(--bg-white);
+  height: 100vh;
+
+  backdrop-filter: blue(20px);
+  border: var(--border);
+  border-radius: var(--br) ;
+  margin: 0 auto; 
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  display: flex;
+}
+
 /* .leaflet-container {
     height: 420px;
     width: 100%;

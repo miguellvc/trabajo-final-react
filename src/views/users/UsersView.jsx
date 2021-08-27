@@ -18,6 +18,7 @@ const mapActionsToProps = dispatch => ({
 export class UsersView extends Component {
 
     componentDidMount(){
+        console.log("propiedades de loanding", this.props.loading);
         this.props.loadUsers();
     }
 

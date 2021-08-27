@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import { Dashboard } from './components/dashboard/dashboard';
 
 import { 
   SideBar, 
@@ -9,7 +10,7 @@ import {
 
 //view 
 import { Home } from './views/Home';
-import  InfoTouristSiteView  from './views/info-tourist-site/infoTouristSiteView'
+import   InfoTouristSiteView  from './views/info-tourist-site/infoTouristSiteView'
 class App extends Component {
   
   render(){
@@ -17,12 +18,14 @@ class App extends Component {
       <>
           
           <Switch>
-            <div className="container">
+            <div className="container-view">
               <SideBar/>
               <Burbujas/>
               <ButtonInfo/>
               <Route exact path="/" component={Home} />
               <Route exact path="/infositio/:id" component={InfoTouristSiteView} />
+              <Route exact path="/dashboard" component={Dashboard} /> 
+            
             </div>
            
           </Switch>

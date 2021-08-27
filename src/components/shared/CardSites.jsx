@@ -26,11 +26,11 @@ export const CardSites = ({ sites, info }) => {
               return(
                   
                   <figure onClick = { () => infoSitio(site._id)}>
-                            <img src={site.photo_url[0].url} alt={site.photo_url[0].description}/>
+                            <img src={site.photo[0].url} alt={site.photo[0].title}/>
                             <div class="capa">
                               <h3>{site.name}</h3>
                               <p>
-                              {site.photo_url[0].description}
+                              {site.photo[0].description}
                               </p>
                             </div>
                   </figure>

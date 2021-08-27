@@ -1,5 +1,26 @@
 import axios from 'axios'
 
+// const getData = () =>{
+//     fetch("http://localhost:3001/api/touristSite/61268ee6ae047932f443e736")
+//     .then(data => {return data.json()})
+//     .then(res => console.log(res))
+// }
+
+
+// let obtener_cliente_id = async() => {
+//     try {
+//         const response = await axios({
+//             method: 'get',
+//             url: `http://localhost:3001/api/touristSite/61268561733dd32c9c79c30d`,
+//             responseType: 'json'
+//         });
+//             console("respuesta del patch", response)
+//         // return response;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
+
 const get = async (url, data) => {
     const request = {
         method: 'get',
@@ -9,10 +30,12 @@ const get = async (url, data) => {
             "Content-Type": "application/json"
         }
     }
-
     const res = await exec(request);
+    // obtener_cliente_id()
+   
     return res.data;
 } 
+
 
 const post = async (url, data) => {
     const request = {
