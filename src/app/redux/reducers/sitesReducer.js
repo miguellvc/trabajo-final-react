@@ -1,4 +1,6 @@
-import { GET_ALL_SITES, GET_SITE,  GET_SITES_LOADING } from "../actions/sitesActions";
+import { GET_ALL_SITES, GET_SITE,  
+         GET_SITES_LOADING,  
+         DELETE_SITE } from "../actions/sitesActions";
 
 const initialState = {
     loading: true,
@@ -18,6 +20,8 @@ export const sitesReducer = (state = initialState, action) => {
             return { ...state, loading: false, loadingSite: true, sites: payload };
         case GET_SITE:
             return { ...state, loading: false, loadingSite: false, sites: payload };
+        case DELETE_SITE: 
+            return {...state, loading : false}
         default : return state
     }
     

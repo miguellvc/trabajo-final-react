@@ -11,3 +11,7 @@ export const getTouristSite = async (id) => {
     // console.log("console desde toutist service", data);
     return data.touristSite;
 }
+
+export const deleteTouristSite = async (id) =>{
+    const data = await client.delete(routes.deleteTouristSite(id))
+}
