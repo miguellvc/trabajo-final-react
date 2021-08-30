@@ -1,6 +1,6 @@
 import React from "react";
 import "../shared/shared.css"
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import lagunabrava from "https://w0.peakpx.com/wallpaper/6/645/HD-wallpaper-flag-of-la-rioja-grunge-art-rhombus-grunge-texture-argentine-province-la-rioja-flag-argentina-national-symbols-la-rioja-provinces-of-argentina-creative-art.jpg";
 export const SideBar = () => {
   return (
@@ -13,14 +13,14 @@ export const SideBar = () => {
 
         <ul>
                 <li>
-                    <a href="#">
-                        Sitios Turísticos
-                    </a>
+                <Link to="/sitios-turisticos" className="link">
+                  Sitios Turísticos
+                </Link>
                 </li>
                 <li>
-                    <a href="">
-                        Museos
-                    </a>
+                <Link to="/dashboard" className="link">
+                  Dashboard
+                </Link>
                 </li>
                 <li>
                     <a href="">

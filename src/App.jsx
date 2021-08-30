@@ -23,7 +23,7 @@ class App extends Component {
               <SideBar/>
               <Burbujas/>
               <ButtonInfo/>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/sitios-turisticos" component={Home} />
               <Route exact path="/infositio/:id" component={InfoTouristSiteView} />
               <Route exact path="/dashboard" component={Dashboard} /> 
             

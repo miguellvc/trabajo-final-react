@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { SiteForm } from "./siteForm";
+import  SiteForm  from "./siteForm";
 import { getAllTourist, deleteSite } from '../../app/redux/actions/sitesActions';
 
 const mapStateToProps = state => ({

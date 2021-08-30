@@ -15,3 +15,7 @@ export const getTouristSite = async (id) => {
 export const deleteTouristSite = async (id) =>{
     const data = await client.delete(routes.deleteTouristSite(id))
 }
+
+export const newTouristSite = async (site) =>{
+    const data = await client.post(routes.newTouristSite(), site)
+} 

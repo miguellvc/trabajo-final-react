@@ -10,7 +10,8 @@ const base = "http://localhost:3001/api";
 const routesSite ={
     getAllTouristSite : () => `${base}/touristSite`,
     getTouristSite : (id) => `${base}/touristSite/${id}`, 
-    deleteTouristSite : (id) => `${base}/touristSite/${id}`
+    deleteTouristSite : (id) => `${base}/touristSite/${id}`,
+    newTouristSite : () => `${base}/touristSite`
 }
 
 
