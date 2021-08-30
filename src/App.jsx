@@ -22,7 +22,7 @@ class App extends Component {
             <div className="container-view">
               <SideBar/>
               <Burbujas/>
-              <ButtonInfo/>
+              {/* <ButtonInfo/> */}
               <Route exact path="/sitios-turisticos" component={Home} />
               <Route exact path="/infositio/:id" component={InfoTouristSiteView} />
               <Route exact path="/dashboard" component={Dashboard} /> 

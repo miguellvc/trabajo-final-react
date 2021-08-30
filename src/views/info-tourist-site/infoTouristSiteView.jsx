@@ -2,6 +2,7 @@ import React, { Component } from "react";
 // import { useParams } from "react-router-dom";
 import { connect } from "react-redux";
 import { getSite } from "../../app/redux/actions/sitesActions";
+import {MapContainer, Marker, TileLayer} from"react-leaflet";
 import "../info-tourist-site/infoTouristSiteView.css";
 
 const mapStateToProps = (state) => ({
@@ -23,8 +24,11 @@ export class InfoTouristSiteView extends Component {
     // console.log("sitio ", this.props.getSit(params.id));
   }
 
+  
+
   render() {
     const site = this.props.sites;
+    const defaultPosition = [site.lat, site.long]; // Paris position
     return (
 
       this.props.loading ?  <div>Cargando Data</div> :
@@ -45,9 +49,17 @@ export class InfoTouristSiteView extends Component {
 
         <div className="container-map">
           <div className="map">
-            mapa
+            <MapContainer
+              center={defaultPosition}
+              zoom={13}
+              style={{ height: "50vh" }}
+            >
+              <TileLayer
+                attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              />
+            </MapContainer>
           </div>
-
           <div className="description">
             <p>{site.description}</p>
           </div>

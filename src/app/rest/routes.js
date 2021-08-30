@@ -1,4 +1,4 @@
-const base = "http://localhost:3001/api";
+const base = process.env.REACT_APP_API_BASE_URL;
 // https://pilar-final-task-backend.herokuapp.com/api/
 // const routes = {
 //     path1: () => `${base}/`,
